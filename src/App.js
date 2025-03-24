@@ -16,7 +16,7 @@ function App() {
           <Link to="/board/qna">문의하기</Link>
           <Link to="/board/review">후기보기</Link>
        </nav>
-       <main style={{minHeight:"90vh"}}>      
+       <main style={{minHeight:"90vh", "maxWidth" : "1280px", margin : "auto"}}>      
           <Routes>
               <Route path='/' element={<Childcontenet />}></Route>
               <Route path='/board/:boardnm' element={<List datainfo={boarddb} ></List>}></Route>     
