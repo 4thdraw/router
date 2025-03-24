@@ -19,7 +19,8 @@ function App() {
        <main style={{minHeight:"90vh", "maxWidth" : "1280px", margin : "auto"}}>      
           <Routes>
               <Route path='/' element={<Childcontenet />}></Route>
-              <Route path='/board/:boardnm' element={<List datainfo={boarddb} ></List>}></Route>     
+              <Route path='/board/:boardnm' element={<List datainfo={boarddb} ></List>}></Route>
+              <Route path='/board/:boardnm/:pk' element={<View datainfo={boarddb} ></View>}></Route>     
               <Route path='*' element={<Nopage />}></Route>
           </Routes>
        </main>

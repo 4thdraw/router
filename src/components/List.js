@@ -27,14 +27,17 @@ const List = ({datainfo}) => {
        { 
             datainfo[boardnm]["info"].length > 0 
             ?
-            datainfo[boardnm]["info"].map((v, i)=> <li key={v.id} >
-                        {v.imgsrc && <img src={v.imgsrc} ></img> }
-                        {v.title}
-                        {v.date}
+            datainfo[boardnm]["info"].map((v, i)=> ( 
+                    <li key={v.id} 
+                        style={{borderBottom : "1px solid #333", "display" :"flex"}} >
+                        { v.imgsrc && <img src={v.imgsrc} ></img> }
+                        <Link to={`/board/${boardnm}/${v.id}`} style={{marginRight:"auto", "display" :"block"}}>{ v.title }</Link>
+                        { v.date }
                     </li>
                 )
+                )
             :
-            <p>게시글이 없습니다.</p>
+            <li>게시글이 없습니다.</li>
 
        }
       
